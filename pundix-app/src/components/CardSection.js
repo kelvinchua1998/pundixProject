@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Button,
-  Card,
-  Col,
-  Container,
-  Form,
-  Row,
-  Alert,
-} from "react-bootstrap";
+import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import Web3 from "web3";
 import { ethers } from "ethers";
 

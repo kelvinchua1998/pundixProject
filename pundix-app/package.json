@@ -48,5 +48,9 @@
     "fs": false,
     "path": false,
     "os": false
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-plugin-react": "^7.31.11"
   }
 }
