@@ -106,12 +106,12 @@ export default function CardSectionERC20({ erc721, metaMaskAddress }) {
     }
     erc721Contract.methods
       .burn(ethers.BigNumber.from(burnInput))
-      .send({ from: metaMaskAddress }, (err, result) => {
+      .send({ from: metaMaskAddress }, (err) => {
         if (err) {
           console.error("Error: ", err);
         }
       })
-      .once("receipt", (receipt) => {
+      .once("receipt", () => {
         getTotalSupply();
       });
   }
