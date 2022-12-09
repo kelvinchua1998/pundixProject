@@ -1,0 +1,32 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
+
+# Hardhat files
+cache
+artifacts
+
+# dependencies
+/pundix-app/node_modules
+/pundix-app/pnp
+/pundix-app/pnp.js
+
+# testing
+/pundix-app/coverage
+
+# production
+/pundix-app/build
+
+# misc
+/pundix-app/DS_Store
+/pundix-app/env.local
+/pundix-app/env.development.local
+/pundix-app/env.test.local
+/pundix-app/env.production.local
+
+/pundix-app/npm-debug.log*
+/pundix-app/yarn-debug.log*
+/pundix-app/yarn-error.log*
