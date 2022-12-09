@@ -63,12 +63,12 @@ export default function CardSectionERC20({ erc721, metaMaskAddress }) {
     }
     erc721Contract.methods
       .safeMint(mintInput)
-      .send({ from: metaMaskAddress }, (err, result) => {
+      .send({ from: metaMaskAddress }, (err) => {
         if (err) {
           console.error("Error: ", err);
         }
       })
-      .once("receipt", (receipt) => {
+      .once("receipt", () => {
         getTotalSupply();
       });
   }
@@ -76,12 +76,12 @@ export default function CardSectionERC20({ erc721, metaMaskAddress }) {
   function pause() {
     erc721Contract.methods
       .pause()
-      .send({ from: metaMaskAddress }, (err, result) => {
+      .send({ from: metaMaskAddress }, (err) => {
         if (err) {
           console.error("Error: ", err);
         }
       })
-      .once("receipt", (receipt) => {
+      .once("receipt", () => {
         getPaused();
       });
   }
@@ -89,12 +89,12 @@ export default function CardSectionERC20({ erc721, metaMaskAddress }) {
   function unpause() {
     erc721Contract.methods
       .unpause()
-      .send({ from: metaMaskAddress }, (err, result) => {
+      .send({ from: metaMaskAddress }, (err) => {
         if (err) {
           console.error("Error: ", err);
         }
       })
-      .once("receipt", (receipt) => {
+      .once("receipt", () => {
         getPaused();
       });
   }

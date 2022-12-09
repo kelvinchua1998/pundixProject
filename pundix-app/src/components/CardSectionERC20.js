@@ -69,7 +69,7 @@ export default function CardSection({ erc20, metaMaskAddress }) {
       });
   }
 
-  function mint() {
+  function transfer() {
     if (transferAmountInput < 0) {
       alert("please provide a valid number");
       return;
@@ -159,7 +159,7 @@ export default function CardSection({ erc20, metaMaskAddress }) {
                   setTransferRecipientInput(e.target.value);
                 }}
               />
-              <Button size="lg" variant="primary" onClick={mint}>
+              <Button size="lg" variant="primary" onClick={transfer}>
                 Transfer
               </Button>
             </Form>
