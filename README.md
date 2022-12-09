@@ -59,3 +59,16 @@ learning points
 1. ensure high gas fee to not get nonce stuck
 2. hardhat for testing and deployment
 3. use alchemy fto deploy to goerli test network
+
+deployed on
+https://main--prismatic-empanada-f6efda.netlify.app/
+
+to connect metamask to the website
+
+Click on the MetaMask Extension in the browser toolbar in the top-right
+Click on the 3 dots menu in the upper right corner
+Click on Connected sites
+Click the Manually connect to current site button at the bottom of the list
+Note: this button will not appear if one of your other accounts is connected to the dapp. If you encounter this issue, check your other wallets for existing connections.
+Select the account you want to connect to the website and click next
+Review the information in the confirmation screen and click Confirm
