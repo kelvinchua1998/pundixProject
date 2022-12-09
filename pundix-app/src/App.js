@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Web3 from "web3";
 import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import CardSection from "./components/CardSection";
 import CardSectionERC20 from "./components/CardSectionERC20";
 
@@ -11,14 +11,6 @@ const erc20_abi = require("./erc20Contract.json").abi;
 const erc721_abi = require("./KELVIN.json").abi;
 
 function App() {
-  const [appState, setappState] = useState({
-    loading: true,
-    metaMaskAddress: "",
-    metaMaskBalance: 0,
-    erc20: null,
-    erc721: null,
-  });
-
   const [loading, setLoading] = useState(true);
   const [metaMaskAddress, setmetaMaskAddress] = useState("");
   const [metaMaskBalance, setmetaMaskBalance] = useState(0);

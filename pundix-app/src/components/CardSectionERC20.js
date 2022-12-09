@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card, Col } from "react-bootstrap";
+import { Button, Card, Col, Row, Form } from "react-bootstrap";
 import Web3 from "web3";
 import { ethers } from "ethers";
 
@@ -59,12 +59,12 @@ export default function CardSection({ erc20, metaMaskAddress }) {
 
     erc20Contract.methods
       .mint(mintaddressInput, mintInput)
-      .send({ from: metaMaskAddress }, (err, result) => {
+      .send({ from: metaMaskAddress }, (err) => {
         if (err) {
           console.error("Error: ", err);
         }
       })
-      .once("receipt", (receipt) => {
+      .once("receipt", () => {
         getTotalSupply();
       });
   }
@@ -81,12 +81,12 @@ export default function CardSection({ erc20, metaMaskAddress }) {
 
     erc20Contract.methods
       .transfer(transferRecipientInput, transferAmountInput)
-      .send({ from: metaMaskAddress }, (err, result) => {
+      .send({ from: metaMaskAddress }, (err) => {
         if (err) {
           console.error("Error: ", err);
         }
       })
-      .once("receipt", (receipt) => {
+      .once("receipt", () => {
         getTotalSupply();
 
         alert("transfer completed!");
@@ -100,12 +100,12 @@ export default function CardSection({ erc20, metaMaskAddress }) {
     }
     erc20Contract.methods
       .burn(ethers.BigNumber.from(burnInput))
-      .send({ from: metaMaskAddress }, (err, result) => {
+      .send({ from: metaMaskAddress }, (err) => {
         if (err) {
           console.error("Error: ", err);
         }
       })
-      .once("receipt", (receipt) => {
+      .once("receipt", () => {
         getTotalSupply();
       });
   }
