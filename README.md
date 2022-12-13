@@ -59,6 +59,7 @@ learning points
 1. ensure high gas fee to not get nonce stuck
 2. hardhat for testing and deployment
 3. use alchemy fto deploy to goerli test network
+4. I have a script to overwrite the stuck transaction ie. sendtransaction.js
 
 deployed on
 https://main--prismatic-empanada-f6efda.netlify.app/
