@@ -18,7 +18,7 @@ const config: HardhatUserConfig = {
     goerli: {
       url: `${process.env.ALCHEMY_API_URL}`,
       accounts: [process.env.METAMASK_PRIVATE_KEY],
-      gasPrice: 90000000000,
+      gasPrice: 30000000000,
     },
   },
   etherscan: {

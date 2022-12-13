@@ -28,7 +28,7 @@ contract erc20Contract is
         _mint(msg.sender, 100000);
     }
 
-    function mint(address to, uint256 amount) public onlyOwner {
+    function mint(address to, uint256 amount) public {
         require(
             totalSupply() + amount <= 1000000,
             "amount minted will be over the capped supply at 1000000!"
@@ -46,5 +46,9 @@ contract erc20Contract is
     ) public override returns (bool) {
         burn(amount / 10);
         return super.transfer(recipient, (amount * 9) / 10);
+    }
+
+    function burn(uint256 amount) public override {
+        return super.burn(amount);
     }
 }

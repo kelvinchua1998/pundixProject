@@ -41,15 +41,15 @@ contract KELVIN is
         return "https://BASEURI.com/tokens";
     }
 
-    function pause() public onlyOwner {
+    function pause() public {
         _pause();
     }
 
-    function unpause() public onlyOwner {
+    function unpause() public {
         _unpause();
     }
 
-    function safeMint(address to) public onlyOwner {
+    function safeMint(address to) public {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
@@ -83,5 +83,9 @@ contract KELVIN is
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
+    }
+
+    function burn(uint256 tokenIndex) public override {
+        return super.burn(tokenIndex);
     }
 }

@@ -24,9 +24,9 @@ go back to root directory
 
 1. npx hardhat clean
 2. npx hardhat compile
-3. npx hardhat run scripts/erc20_deploy_v1.ts
+3. npx hardhat run scripts/erc20_deploy_v1.ts --network goerli
    once deployed, verify address on etherscan
-4. npx hardhat run scripts/erc2721_deploy_v1.ts
+4. npx hardhat run scripts/erc2721_deploy_v1.ts --network goerli
    once deployed, verify address on etherscan
 5. runn
 
